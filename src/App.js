@@ -27,13 +27,13 @@ function App() {
       if (weight <= 5) {
         setBmiState("Underweight");
       } 
-      else if (weight >= 5 && bmi <= 85) {
+      else if (weight >= 5 && weight <= 85) {
         setBmiState("Healthy Weight");
       } 
-      else if (bmi > 85.0 && bmi <= 95) {
+      else if (weight > 85.0 && weight <= 95) {
         setBmiState("At risk of overweight");
       } 
-      else if (bmi >= 95.0) {
+      else if (weight >= 95.0) {
         setBmiState("Overweight");
       }
     }
@@ -77,7 +77,7 @@ function App() {
           </div>
 
           <input type="submit" value={'Calculate'} className="center btn btn-success mx-5 my-3" onClick={calc} />
-
+          
           <h2 style={{ marginTop: 3 }}>BMI:{bmi}</h2>
           <h2 style={{ marginTop: 3 }}>BMI-State: {(bmistate)}</h2>
 
