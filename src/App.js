@@ -8,23 +8,6 @@ function App() {
   const [bmi, setBmi] = useState(null);
   const [bmistate, setBmiState] = useState("");
 
-  // if (age >= 20) {
-  //   if (bmi <= 18.5) {
-  //     setBmiState("UnderWeight");
-  //   }
-  //   else if (bmi >= 18.5 && bmi <= 24.9) {
-  //     setBmiState("Normal or Healthy Weight");
-  //   }
-  //   else if (bmi >= 25.0 && bmi <= 29.9) {
-  //     setBmiState("OverWeight");
-  //   }
-  //   else if (bmi >= 30.0) {
-  //     setBmiState("Obese");
-  //   }
-  // }
-  // else {
-  //     setBmiState("");
-  // }
   const agess = () => {
     if (age >= 20) {
       if (bmi <= 18.5) {
