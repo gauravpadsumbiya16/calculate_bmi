@@ -24,24 +24,24 @@ function App() {
       }
     }
     else {
-      if (weight <= 5) {
+      if (bmi <= 18.5) {
         setBmiState("Underweight");
       } 
-      else if (weight >= 5 && weight <= 85) {
+      else if (bmi > 18.5 && bmi <= 24.9) {
         setBmiState("Healthy Weight");
       } 
-      else if (weight > 85.0 && weight <= 95) {
+      else if (bmi >= 25 && bmi <= 29.9) {
         setBmiState("At risk of overweight");
       } 
-      else if (weight >= 95.0) {
-        setBmiState("Overweight");
-      }
+      else if (bmi >= 30.0) {
+        setBmiState("overweight");
+      } 
     }
   };
   const calc = () => {
 
     if (weight !== null && height !== null) {
-      console.log("age ",age,"weight = ",weight," height = ",height);
+      console.log("age = ",age,"weight = ",weight," height = ",height);
       const calculatedBmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
       setBmi(calculatedBmi);
     }
