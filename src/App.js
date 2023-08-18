@@ -77,10 +77,13 @@ function App() {
           </div>
 
           <input type="submit" value={'Calculate'} className="center btn btn-success mx-5 my-3" onClick={calc} />
-          
-          <h2 style={{ marginTop: 3 }}>BMI:{bmi}</h2>
-          <h2 style={{ marginTop: 3 }}>BMI-State: {(bmistate)}</h2>
-
+          {bmistate.length>0
+          ?
+          <div>
+            <h2 style={{ marginTop: 3 }}> BMI :{bmi} </h2>
+            <h2 style={{ marginTop: 3 }}>BMI-State : {(bmistate)}</h2> 
+          </div>
+          : <h3>Enter all parameters</h3>}
         </form>
       </div>
     </>
