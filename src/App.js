@@ -38,6 +38,16 @@ function App() {
       } 
     }
   };
+
+  const clear = () =>{
+    
+    setAge("");
+    setHeight("");
+    setWeight("");
+    setBmi("");
+    setBmiState('');
+   
+  }
   const calc = () => {
 
     if (weight !== null && height !== null) {
@@ -46,7 +56,7 @@ function App() {
       setBmi(calculatedBmi);
     }
     else {
-      console.log("enter height and width");
+      console.log("enter height and weight");
     }
     
   }
@@ -76,7 +86,9 @@ function App() {
             <input className='forinput mx-3 my-3' type="text" value={weight} onChange={(e) => { setWeight(e.target.value) }} />
           </div>
 
-          <input type="submit" value={'Calculate'} className="center btn btn-success mx-5 my-3" onClick={calc} />
+          <input type="submit" value={'Calculate'} className="center btn btn-success my-3" onClick={calc} />
+          <input type="button" value={'Clear'} className="center btn btn-danger mx-2 my-3" onClick={clear} />
+
           {bmistate.length>0
           ?
           <div>
