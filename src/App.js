@@ -41,6 +41,7 @@ function App() {
   const calc = () => {
 
     if (weight !== null && height !== null) {
+      console.log("age ",age,"weight = ",weight," height = ",height);
       const calculatedBmi = parseFloat((weight / (height * height)) * 10000).toFixed(2);
       setBmi(calculatedBmi);
     }
@@ -66,15 +67,14 @@ function App() {
           </div>
 
           <div className='div center'>
-            <label className='center'>Enter weight (Kg) </label>
-            <input className='forinput mx-3 my-3' type="text" value={weight} onChange={(e) => { setWeight(e.target.value) }} />
-          </div>
-
-          <div className='div center'>
             <label className='center'>Enter Height (cm) </label>
             <input className='forinput mx-3 my-3' type="text" value={height} onChange={(e) => { setHeight(e.target.value) }} />
           </div>
 
+          <div className='div center'>
+            <label className='center'>Enter weight (Kg) </label>
+            <input className='forinput mx-3 my-3' type="text" value={weight} onChange={(e) => { setWeight(e.target.value) }} />
+          </div>
 
           <input type="submit" value={'Calculate'} className="center btn btn-success mx-5 my-3" onClick={calc} />
 
