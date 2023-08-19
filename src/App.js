@@ -67,23 +67,24 @@ function App() {
   };
   return (
     <>
-      <div style={{ height: 600, width: 500, border: '1px solid black', borderRadius: 20 , textAlign: 'center' }} className="container my-5 py-5">
-        <h1>BMI Calulation</h1>
+      <div style={{border: '3px solid black', justifyContent:'center' ,borderRadius: 20 }} className="container center left my-5 py-5">
+        <div style={{textAlign:'center'}}>
+        <h1 className='mx-5'>BMI Calulation</h1>
         <form className='m-5' onSubmit={handleSubmit}>
 
           <div className='center'>
-            <label className='mx-3'> Enter Age </label>
-            <input className='forinput mx-4 my-3' type="text" value={age} onChange={(e) => { setAge(e.target.value) }} />
+            <label className='mx-4'> Enter Age </label>
+            <input className='forinput my-3 center' type="text" value={age} onChange={(e) => { setAge(e.target.value) }} />
           </div>
 
-          <div className='div center'>
+          <div className='center'>
             <label className='center'>Enter Height (cm) </label>
-            <input className='forinput mx-3 my-3' type="text" value={height} onChange={(e) => { setHeight(e.target.value) }} />
+            <input className='forinput mx-3 my-3 ' type="text" value={height} onChange={(e) => { setHeight(e.target.value) }} />
           </div>
 
-          <div className='div center'>
+          <div className='center'>
             <label className='center'>Enter weight (Kg) </label>
-            <input className='forinput mx-3 my-3' type="text" value={weight} onChange={(e) => { setWeight(e.target.value) }} />
+            <input className='forinput mx-3 my-3 ' type="text" value={weight} onChange={(e) => { setWeight(e.target.value) }} />
           </div>
 
           <input type="submit" value={'Calculate'} className="center btn btn-success my-3" onClick={calc} />
@@ -97,6 +98,7 @@ function App() {
           </div>
           : <h3>Enter all parameters</h3>}
         </form>
+        </div>
       </div>
     </>
   );
