@@ -72,6 +72,11 @@ function App() {
         <h1 className='mx-5'>BMI Calulation</h1>
         <form className='m-5' onSubmit={handleSubmit}>
 
+        <div className='center'>
+            <label className='mx-4'> check div </label>
+            <input className='forinput my-3 center' type="text" />
+          </div>
+
           <div className='center'>
             <label className='mx-4'> Enter Age </label>
             <input className='forinput my-3 center' type="text" value={age} onChange={(e) => { setAge(e.target.value) }} />
